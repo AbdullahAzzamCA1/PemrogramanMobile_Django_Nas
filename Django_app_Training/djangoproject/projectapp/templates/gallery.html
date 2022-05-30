@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gallery</title>
+</head>
+<body>
+    <h1 align="center"> Gallery Page</h1>
+    <hr>
+    <center>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'gallery' %}">Gallery</a>
+  </center>
+    <hr>
+    <h3 align="center"> Gallery Page</h3>
+    <marquee direction="up" scrolldelay="5">
+        <img src="{% static 'img/1.jpg' %}" alt=""> <br/><br/>
+        <img src="{% static 'img/2.jpg' %}" alt=""> <br/><br/>
+        <img src="{% static 'img/3.jpg' %}" alt=""> <br/><br/>
+    </marquee>
+
+</body>
+</html>

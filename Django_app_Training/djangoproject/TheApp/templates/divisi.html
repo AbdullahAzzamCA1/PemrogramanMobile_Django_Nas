@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+{% block content %}
+{% load static %}
+
+<h3>Daftar Divisi</h3> 
+<table class="table table-striped">
+  <thead>
+    <tr class="table-primary">
+      <th scope="col">No</th>
+      <th scope="col">Nama</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    {% for data in divisi_list %}
+    <tr class="table-dark">
+      <td>{{ forloop.counter }}</td>
+      <td>{{ data.nama }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+
+{% endblock %}
